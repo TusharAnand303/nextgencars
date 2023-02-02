@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(0, 0%, 100%);
+  --first-color-alt: hsl(219, 69%, 52%);
+  --title-color: hsl(219, 8%, 95%);
+  --text-color: hsl(219, 8%, 75%);
+  --text-color-light: hsl(219, 4%, 55%);
+  --white-color: #fff;
+  --body-color: hsl(0, 0%, 11%);
+  --container-color: hsl(0, 0%, 13%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Exo', sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1024px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.shape{
+  background-color: rgba(5, 233, 138, 0.493);
+  filter: blur(112px);
+  border-radius: 50%;
+}
+.shape__big{
+  width: 400px;
+  height: 400px;
+}
+.shape__small{
+  width: 300px;
+  height: 300px;
+}
+
+
+/* About section */
+
+.about__container
+{
+    row-gap: 6rem;
+   
+}
+.about__group{
+    position: relative;
+}
+.about__img{
+    width: 260px;
+    border-radius: 1rem;
+}
+.about__card{
+    width: 150px;
+    position: absolute;
+    right: 0;
+    bottom: -2.4rem;
+    background-color: hsla(0, 0%, 100%, .1);
+    backdrop-filter: blur(15px);
+    padding: 1rem .75rem;
+    text-align: center;
+    border-radius: 1.25rem;
+    font-size: 10px;
+}
+.about__card-title{
+    font-size: var(--h3-font-size);
+    margin-bottom: .5rem;
+}
+.about__card-description{
+    font-size: var(--smaller-font-size);
+}
+.about__title{
+    text-align: initial;
+    margin-bottom: 2rem;
+    margin-top: -20px;
+    text-align: center;
+    margin-top: -50px;
+}
+.about__description{
+    margin-bottom: 2rem;
+    margin-top: 30px;
+}
+.button{
+    display: inline-block;
+    background-color:rgb(5, 151, 78);
+    color: var(--white-color);
+    padding: 1rem 2rem;
+    border-radius: .25rem;
+    font-size: var(--normal-font-size);
+    transition: .3s;
+}
+@media screen and (max-width: 320px){
+  
+  .about__img{
+    width: 200px;
+    border-radius: 1rem;
+}
+.about__card{
+  width: 140px;
+  position: absolute;
+  right: 0;
+  bottom: -2.4rem;
+  background-color: hsla(0, 0%, 100%, .1);
+  backdrop-filter: blur(15px);
+  padding: .5rem .75rem;
+  text-align: center;
+  border-radius: 1.25rem;
+  font-size: 8px;
+}
+  
+}
+@media screen and (min-width: 576px){
+  
+.about__group{
+  width: 350px;
+  justify-self: center;
+}
+  
+}
+@media screen and (min-width: 540px){
+  
+  .about__group{
+    width: 350px;
+    justify-self: center;
+  }
+    
+  }
+  @media screen and (min-width: 1040px){
+    
+  .ii{
+    /* background-color: red; */
+    width: 600px;
+  }
+  .about__card{
+    width: 160px;
+    position: absolute;
+    right: 0;
+    bottom: -2.4rem;
+    background-color: hsla(0, 0%, 100%, .1);
+    backdrop-filter: blur(15px);
+    padding: 1rem 1rem;
+    text-align: center;
+    border-radius: 1.25rem;
+    font-size: 12px;
+    /* margin-right: -20px; */
+  }
+  .about{
+    margin-bottom: -40px;
+  }
+  .about__container{
+    /* background-color: red; */
+    padding-left: 300px;
+    padding-right: 20px;
+  }
+
+  
+  }
